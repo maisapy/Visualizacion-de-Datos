@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Accidentes de tránsito en Chicago</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Accidentes de tráfico en Chicago </h1>
+    <h4 class="main-autor">Nombre: María Isabel Rodríguez</h3>
+    <h4 class="main-url">Url: <a href="https://js-cy8uka.stackblitz.io">https://js-cy8uka.stackblitz.io</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if">https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if</a></h3>
+    <h4 class="main-fecha">Fecha: 15/03/2022</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos de accidentes de tráfico ocurridos en la ciudad de Chicago, el dataset contiene 49 columnas, que contienen la fecha y otros parámetros de tiempo, además de los datos del entorno, como clima o condiciones de iluminación, también se registra el motivo primario del accidente y el daño observado, además de la ubicación del hecho, entre otros datos.
+<br>
+<br>
+En este documento se intenta demostrar que existe un patrón de comportamiento relacionado a los días, meses y horas del año y además se prentende identificar las zonas criticas de atención por el alto número de accidentes y las causas principales que ocasionan los hechos, para ello se ha tomado cuatro años de datos, del 2018 al 2021 y se ha realizado una serie de representaciones que nos permiten visualizar y comparar estos patrones a lo largo del tiempo.<br></br>
+            <div class="metadato  " >
+              La audiencia es el público en general, los organismos encargados de realizar las campañas de seguridad vial y el personal de blanco, se pretende proveer una herramienta que ayude a intensificar las campañas de conducción segura en periodos determinados, y la mejora en los centros de atención de primeros auxilios en zonas específicas en las que se detecta un mayor número de accidentes.              
+            </div>
+            </br>
+            </br>
+            </br>
+        </div>
+    </div>
+
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- The first bar chart -->
+        <h2 class="plot-title">Total de accidentes por año</h2>
+        <div class="text">
+          Usamos el tipo de gráfico de barra para representar la cantidad de accidentes en 4 años, de esta forma podemos ver que el número de casos totales ha sido muy similar, excepto en el año 2020, donde se ve una disminución importante, probablemente relacionado con los dias de cuarentena de la pandemia. <br>
+          Se ha utilizado la herramienta Chart de la hoja de cálculo de Google Sheet para desarrollar los gráficos de barras de este y el siguiente apartado.
+          </br>
+        </div>  
+
+        <div id="plotContainer1">
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvjFhMRG5OgdwVUf-zlk0g3YA1wtDAutIgrn8CYiA7YnnuX11ay_4bE-duIEkyUtnh-RKdrZ4UFz-V/pubchart?oid=598132691&amp;format=interactive"></iframe>
+        </div>
+        
+          <h2 class="plot-title">Las 10 causas principales de accidentes</h2>
+          <div class="text">
+          <br>Este gráfico pretende mostrar cuales son las causas principales que ocasionan la mayoria de los accidentes, se espera que esta información junto con las demás ayude a desarrollar campañas de concienciación mejor enfocadas a esos factores.</br>
+          </div>  
+        <div id="plotContainer2">
+        <iframe width="761" height="470" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvjFhMRG5OgdwVUf-zlk0g3YA1wtDAutIgrn8CYiA7YnnuX11ay_4bE-duIEkyUtnh-RKdrZ4UFz-V/pubchart?oid=855111265&amp;format=interactive"></iframe>
+        </div>
+
+
+        <h2 class="plot-title">Evolución de casos fatales por año</h2>
+        <div class="text">
+          <br>
+          En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, algo muy interesante es la caida que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
+          </br>
+          <br>
+          Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
+          La herramienta utilizada es Python con la libreria SEABORN.
+         </br>
+         <br>
+          Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
+          <a href="https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=igIn2rvuURRY">https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=igIn2rvuURRY</a>
+         </br>
+        </div> 
+
+        <div id="plotContainer3">
+        <a href="https://ibb.co/dgkjd5L"><img src="https://i.ibb.co/FV8mSD0/Evolucion-de-accidentes-fatales.png" alt="Evolucion-de-accidentes-fatales" border="0"></a>
+        </div>
+
+
+
+        <h2 class="plot-title">Evolución de accidentes</h2>
+        <div class="text">
+          <br>
+          En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, algo muy interesante es la caida que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
+          </br>
+          <br>
+          Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
+          La herramienta utilizada es Python con la libreria SEABORN.
+         </br>
+         <br>
+          Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
+          <a href="https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=igIn2rvuURRY">https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=igIn2rvuURRY</a>
+         </br>
+        </div> 
+
+        <div id="plotContainer3">
+        <a href="https://ibb.co/41wvSc5"><img src="https://i.ibb.co/7kxMpH6/Evoluci-n-en-la-cantidad-de-accidentes-a-lo-largo-del-a-o.png" alt="Evoluci-n-en-la-cantidad-de-accidentes-a-lo-largo-del-a-o" border="0"></a>
+        </div>
+        
+        </br>
+        </br>
+
+        <!-- The second bar chart -->
+        <h2 class="plot-title">Incidentes por hora</h2>
+        <div id="plotContainer4">
+          <div class="text">
+              <br>
+              En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los tres años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
+              </br>
+              <br>
+              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay menos incidentes en el lapso de las 4:00 AM y 5:00 AM y un pico muy alto entre las 4:00 PM y las 7 PM.  
+              </br>
+              <br>
+              Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
+              La herramienta utilizada es Python con la libreria SEABORN.
+              </br>
+              <br>
+              Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
+               <a href="https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=KFR-c4PrrKBd">https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=KFR-c4PrrKBd</a>
+              </br>               
+          </div>
+          <br>
+          <a href="https://ibb.co/gyvmBPZ"><img src="https://i.ibb.co/1Zs7wdG/Evoluci-n-por-hora-de-accidentes.png" alt="Evoluci-n-por-hora-de-accidentes" border="0"></a>
+      </div>
+
+        <h2 class="plot-title">Incidentes por día de la semana</h2>
+        <div id="plotContainer5">
+          <div class="text">
+              <br>
+              En este gráfico revisamos las incidencias por día de la semana, comparando los datos de tres años, podemos ver que al igual que en los casos anteriores, también se puede establecer un patrón de comportamiento, siendo los domingos los días con menos cantidad de incidentes y por el contario, los viernes tienen el pico más alto de casos.
+              </br>              
+              <br>
+              Usamos un gráfico de barras para comparar las categorías y diferenciamos con colores los datos de cada año.
+              La herramienta utilizada es Python con la libreria BOKEH, esta opción nos permite crear un gráfico interactivo.
+              </br>
+              <br>
+              Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
+               <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
+              </br>               
+          </div>
+          <br>
+          <a href="https://ibb.co/JKXK1yz"><img src="https://i.ibb.co/80F0Cdj/Cantidad-de-accidentes-por-a-o-y-dia-de-la-semana.png" alt="Cantidad-de-accidentes-por-a-o-y-dia-de-la-semana" border="0"></a>
+      </div>
+
+       <h2 class="plot-title">Densidad de incidentes por distrito</h2>
+        <div id="plotContainer5">
+          <div class="text">
+              <br>
+              En este gráfico revisamos las zonas con más alta densidad de incidencias, esto nos permite identificar dónde se debe reforzar la seguridad. En el mapa se puede observar que la zona A1 es la que tiene la mayor concentración de incidencias a lo largo de estos tres años.
+              </br>              
+
+              <br>
+              La herramienta utilizada es Tableu.
+              </br>            
+          </div>
+          <br>
+          <a href="https://ibb.co/vcQfNKp"><img src="https://i.ibb.co/cyCRW70/Mapa-de-accidentes.png" alt="Mapa-de-accidentes" border="0"></a>
+      </div>
+<!-- add outro text to the page body -->
+    <div class="Interpretation">
+        <h2 class="text-title">Interpretación</h2>
+        <div class="text">
+          <br>
+            <p>Luego de la revisión de datos podemos concluir que los picos mas altos y bajos estan relacionados con los meses más frios y calurosos del año, siendo agosto el mes en que se dispara la cantidad de incidencias.
+          </br>    
+          <br>
+            Asi mismo vemos que los viernes son los días más críticos dentro de la semana, y hay que poner especial atención al bloque de las 4:00 PM a las 7:00 PM, porque es el periodo en que aumenta la cantidad de hechos delictivos, esto podría coincidir con el horario de salida laboral.
+          </br>
+          <br>
+            Finalmente, las fuerzas de seguridad deberían ser reforzadas en este periodo de tiempo, sobre el distrito A1, que es el que presenta la mayor densidad de hechos delictivos</p>
+          </br>
+           
+        </div>
+    </div>
+
+        </br>
+        </br>
+        </br>
+    </div>
+
+    
+</body>
+</html>
