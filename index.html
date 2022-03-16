@@ -59,12 +59,12 @@
     <div class="summary">
         <h2 class="text-title">Resumen</h2>
         <div class="text">
-El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos de accidentes de tráfico ocurridos en la ciudad de Chicago, el dataset contiene 49 columnas, que contienen la fecha y otros parámetros de tiempo, además de los datos del entorno, como clima o condiciones de iluminación, también se registra el motivo primario del accidente y el daño observado, además de la ubicación del hecho, entre otros datos.
+El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos de accidentes de tráfico ocurridos en la ciudad de Chicago, el dataset contiene 49 columnas, que contienen la fecha y otros parámetros de tiempo, además de los datos del entorno, como clima o condiciones de iluminación, también se registra el motivo primario del accidente y la ubicación del hecho, entre otros datos.
 <br>
 <br>
-En este documento se intenta demostrar que existe un patrón de comportamiento relacionado a los días, meses y horas del año y además se prentende identificar las zonas criticas de atención por el alto número de accidentes y las causas principales que ocasionan los hechos, para ello se ha tomado cuatro años de datos, del 2018 al 2021 y se ha realizado una serie de representaciones que nos permiten visualizar y comparar estos patrones a lo largo del tiempo.<br></br>
+En este documento se intenta demostrar el patrón de comportamiento de los accidentes a lo largo del tiempo y la manera en que la pandemia influyó en el tráfico, además se prentende identificar las zonas criticas de atención por el alto número de accidentes y las causas principales que ocasionan los hechos, para ello se ha tomado cuatro años de datos, del 2018 al 2021, y se ha realizado una serie de representaciones que nos ayuden a hacer las verificaciones.<br></br>
             <div class="metadato  " >
-              La audiencia es el público en general, los organismos encargados de realizar las campañas de seguridad vial y el personal de blanco, se pretende proveer una herramienta que ayude a intensificar las campañas de conducción segura en periodos determinados, y la mejora en los centros de atención de primeros auxilios en zonas específicas en las que se detecta un mayor número de accidentes.              
+              La audiencia es el público en general y los organismos encargados de realizar las campañas de seguridad vial, se pretende proveer una herramienta que ayude a intensificar las campañas de conducción segura en periodos determinados, proveyendo información relevante que ataque los problemas principales.
             </div>
             </br>
             </br>
@@ -78,7 +78,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="plot-title">Total de accidentes por año</h2>
         <div class="text">
           Usamos el tipo de gráfico de barra para representar la cantidad de accidentes en 4 años, de esta forma podemos ver que el número de casos totales ha sido muy similar, excepto en el año 2020, donde se ve una disminución importante, probablemente relacionado con los dias de cuarentena de la pandemia. <br>
-          Se ha utilizado la herramienta Chart de la hoja de cálculo de Google Sheet para desarrollar los gráficos de barras de este y el siguiente apartado.
+          Se ha utilizado la herramienta Chart de la hoja de cálculo de Google Sheet para desarrollar este gráfico.
           </br>
         </div>  
 
@@ -90,7 +90,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
           <div class="text">
           <br>Este gráfico pretende mostrar cuales son las causas principales que ocasionan la mayoria de los accidentes, se espera que esta información junto con las demás ayude a desarrollar campañas de concienciación mejor enfocadas a esos factores.</br>
           <br>
-          Se ha utilizado la herramienta Datawrapper el gráfico de barras de este y el siguiente apartado.
+          Se ha utilizado la herramienta Datawrapper para desarrollar el gráfico de barras, este gráfico es muy apropiado para representar diferentes categorias, resaltamos dos categorias que llaman la atención por que son motivos simples pero causan gran cantida de accidentes, dejamos en gris la categoria no determinada para restar importancia a esa linea.
           </br>
           </div>  
         <div id="plotContainer2">
@@ -102,7 +102,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="plot-title">Evolución de casos fatales por año</h2>
         <div class="text">
           <br>
-          En este gráfico visualizamos la cantidad de casos fatales a lo largo de los meses durante 4 años y verificamos si existe algún patrón, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, pero algo llamativo es que en los meses de verano del año 2020 y 2021 hubo un alto pico de casos fatales, comparado a los años anteriores.
+          En este gráfico visualizamos la cantidad de casos fatales a lo largo de los meses, durante 4 años y verificamos si existe algún patrón, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, pero algo llamativo es que en los meses de verano del año 2020 y 2021 hubo un alto pico de casos fatales, comparado a los años anteriores.
           </br>
           <br>
           Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
@@ -123,7 +123,8 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="plot-title">Evolución de accidentes anual</h2>
         <div class="text">
           <br>
-          En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, algo muy interesante es la caida que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
+          En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, pero a diferencia del gráfico anterior este incluye todos los casos sean o no fatales. 
+          Como se puede observar el comportamiento es muy parecido cada año, con un incremento en los meses de verano, algo muy interesante es la caída que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
           </br>
           <br>
           Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
@@ -150,7 +151,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
               En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los cuatro años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
               </br>
               <br>
-              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay más accidentes durante la tarde, incluso esto se mantiene en los años de la pandemia.
+              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay más accidentes durante la tarde gran parte del año, incluso esto se mantiene en los años de la pandemia.
               </br>
               <br>
               Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
@@ -169,7 +170,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <div id="plotContainer5">
           <div class="text">
               <br>
-              En este gráfico revisamos los accidentes por día de la semana (domingo = 1), comparando los datos de cuatro años, se puede observar un patrón de comportamiento, siendo los domingos los días con menos cantidad de accidentes y por el contario, los viernes tienen el pico más alto de casos.
+              En este gráfico revisamos los accidentes por día de la semana (domingo = 1), comparando los datos de cuatro años, se puede observar un patrón de comportamiento, siendo los domingos los días con menos cantidad de accidentes y por el contrario, los viernes tienen el pico más alto de casos.
               </br>              
               <br>
               Usamos un gráfico de barras para comparar las categorías y diferenciamos con diferentes tonos de colores los datos de cada año.
@@ -188,7 +189,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <div id="plotContainer5">
           <div class="text">
               <br>
-              En este gráfico revisamos las zonas con más alta densidad de accidentes, y aunque se puede observar accidentes a todo lo largo de Chicago, hay una zona roja intensa entre Loop y Near North Side, en estos distritos se ubican edificios gubernamentales importantes y su centro financiero, además de tener la mejor zona de bares y discotecas, lo que lo hace muy atractivo también para el turismo, todo puede influir en la cantidad de accidentes que ocurren alli. 
+              En este gráfico revisamos las zonas con más alta densidad de accidentes, y aunque se puede observar accidentes a todo lo largo de Chicago, hay una zona roja intensa entre Loop y Near North Side, en estos distritos se ubican edificios gubernamentales importantes y su centro financiero, además de tener la mejor zona de bares y discotecas, lo que lo hace muy atractivo también para el turismo, es probable que todo que todo esto influya en la cantidad de accidentes que ocurren alli. 
               </br>              
 
               <br>
@@ -208,19 +209,22 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="text-title">Interpretación</h2>
         <div class="text">
           <br>
-            <p>Luego de la revisión de datos podemos concluir hay una mayor cantidad de accidentes los meses de verano, incluso reflejandose esto durante los años de la pandemia, lastimosamente, también la cantidad de accidentes fatales ocurre en esta temporada. 
+            <p>Luego de la revisión de datos podemos concluir hay una mayor cantidad de accidentes los meses de verano, incluso reflejándose esto durante los años de la pandemia, lastimosamente, también la mayor cantidad de accidentes fatales ocurre en esta temporada. 
           </br>    
           <br>
-            Asi mismo vemos que los viernes son los días con más cantidad de accidentes, probablemente la salida de personas que deciden hacer actividades de entretenimiento los fines de semana.
+            Asi mismo, vemos que los viernes son los días con más cantidad de accidentes, probablemente, debido al mayor volumen de personas que deciden hacer actividades de entretenimiento los fines de semana.
             Hay también una constante durante los 4 años, en los 12 meses del año, reflejando que la mayor cantidad de accidentes ocurren durante la tarde.
           </br>
           <br>
-            Es importante resaltar en este punto las principales causas de accidentes, porque esto ayudará a realizar buenas campañas de seguridad vial, las razones por la que ocurren muchos de estos eventos está relacionada a cosas básicas como no ceder el paso, seguir demasiado cerca o hacer adelanto inapropiados, es esencial trabajar estos temas como parte de la educación vial de los conductores y asi evitar muertes por imprudencia.
+            Es importante resaltar en este punto las principales causas de accidentes, porque esto ayudará a realizar buenas campañas de seguridad vial, las razones por la que ocurren muchos de estos eventos están relacionadas a cosas básicas como no ceder el paso, seguir demasiado cerca, o hacer adelanto inapropiados, es esencial trabajar estos temas como parte de la educación vial de los conductores y asi evitar muertes por imprudencia.
           </br>        
           <br>
             Otro interesante item a destacar es la forma en que la pandemia influyó incluso en el tráfico de la ciudad, permeando en todos los ámbitos cotidianos de la vida.
           </br>        
-          
+          <br>
+            Se sugiere intensificar las campañas de seguridad vial previo a la temporada de verano, y los fines de semana, enfocados en las causas principales identificadas. 
+            Además, se pueden desarrollar programas de educación, no solo para obtener el carnet de conducir sino como un curso frecuente.
+          </br>     
           </p>
           </br>           
         </div>
