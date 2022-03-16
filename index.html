@@ -48,7 +48,7 @@
 <body>
     <h1 class="main-title">Accidentes de tráfico en Chicago </h1>
     <h4 class="main-autor">Nombre: María Isabel Rodríguez</h3>
-    <h4 class="main-url">Url: <a href="https://js-cy8uka.stackblitz.io">https://js-cy8uka.stackblitz.io</a></h3>
+    <h4 class="main-url">Url: <a href="https://js-pkxu96.stackblitz.io">https://js-pkxu96.stackblitz.io</a></h3>
     <h4 class="main-fuente">Fuente: <a href="https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if">https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if</a></h3>
     <h4 class="main-fecha">Fecha: 15/03/2022</h4>
     <br>
@@ -97,7 +97,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="plot-title">Evolución de casos fatales por año</h2>
         <div class="text">
           <br>
-          En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, algo muy interesante es la caida que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
+          En este gráfico visualizamos la cantidad de casos fatales a lo largo de los meses durante 4 años y verificamos si existe algún patrón, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, pero algo llamativo es que en los meses de verano del año 2020 y 2021 hubo un alto pico de casos fatales, comparado a los años anteriores.
           </br>
           <br>
           Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
@@ -115,7 +115,7 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
 
 
 
-        <h2 class="plot-title">Evolución de accidentes</h2>
+        <h2 class="plot-title">Evolución de accidentes anual</h2>
         <div class="text">
           <br>
           En este gráfico visualizamos la cantidad de accidentes que ocurren por mes a lo largo de todo un año, la comparación toma los 4 años sobre los que estamos haciendo el análisis, cada línea representa un año, y como se puede observar el comportamiento es muy parecido en cada año, con un incremento en los meses de verano, algo muy interesante es la caida que hubo en abril del 2020, es probablemente el reflejo del inicio del confinamiento por la pandemia.
@@ -138,14 +138,14 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         </br>
 
         <!-- The second bar chart -->
-        <h2 class="plot-title">Incidentes por hora</h2>
+        <h2 class="plot-title">Accidentes por hora</h2>
         <div id="plotContainer4">
           <div class="text">
               <br>
-              En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los tres años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
+              En este gráfico incluimos la variable de hora para ver si existe un comportamiento también asociado a las horas, hemos superpuesto los cuatro años para poder tener una comparación más completa y hemos abierto por meses para analizar si esto se mantiene igual en cada mes. 
               </br>
               <br>
-              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay menos incidentes en el lapso de las 4:00 AM y 5:00 AM y un pico muy alto entre las 4:00 PM y las 7 PM.  
+              De esta manera se puede observar que también existe un patrón asociado a las horas, vemos que hay más accidentes durante la tarde, incluso esto se mantiene en los años de la pandemia.
               </br>
               <br>
               Usamos el gráfico de linea, porque nos ayuda a reflejar la tendencia en el trascurso del tiempo.
@@ -160,35 +160,40 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
           <a href="https://ibb.co/gyvmBPZ"><img src="https://i.ibb.co/1Zs7wdG/Evoluci-n-por-hora-de-accidentes.png" alt="Evoluci-n-por-hora-de-accidentes" border="0"></a>
       </div>
 
-        <h2 class="plot-title">Incidentes por día de la semana</h2>
+        <h2 class="plot-title">Accidentes por día de la semana</h2>
         <div id="plotContainer5">
           <div class="text">
               <br>
-              En este gráfico revisamos las incidencias por día de la semana, comparando los datos de tres años, podemos ver que al igual que en los casos anteriores, también se puede establecer un patrón de comportamiento, siendo los domingos los días con menos cantidad de incidentes y por el contario, los viernes tienen el pico más alto de casos.
+              En este gráfico revisamos los accidentes por día de la semana (domingo = 1), comparando los datos de cuatro años, se puede observar un patrón de comportamiento, siendo los domingos los días con menos cantidad de accidentes y por el contario, los viernes tienen el pico más alto de casos.
               </br>              
               <br>
-              Usamos un gráfico de barras para comparar las categorías y diferenciamos con colores los datos de cada año.
+              Usamos un gráfico de barras para comparar las categorías y diferenciamos con diferentes tonos de colores los datos de cada año.
               La herramienta utilizada es Python con la libreria BOKEH, esta opción nos permite crear un gráfico interactivo.
               </br>
               <br>
               Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
-               <a href="https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46">https://colab.research.google.com/drive/1Ly-_97-IDxuZrLY6N9mz8UQ9SOPLUd46</a>
+               <a href="https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=1ROTBl9ju6_g">https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=1ROTBl9ju6_g</a>
               </br>               
           </div>
           <br>
           <a href="https://ibb.co/JKXK1yz"><img src="https://i.ibb.co/80F0Cdj/Cantidad-de-accidentes-por-a-o-y-dia-de-la-semana.png" alt="Cantidad-de-accidentes-por-a-o-y-dia-de-la-semana" border="0"></a>
       </div>
 
-       <h2 class="plot-title">Densidad de incidentes por distrito</h2>
+       <h2 class="plot-title">Densidad de accidentes por distrito</h2>
         <div id="plotContainer5">
           <div class="text">
               <br>
-              En este gráfico revisamos las zonas con más alta densidad de incidencias, esto nos permite identificar dónde se debe reforzar la seguridad. En el mapa se puede observar que la zona A1 es la que tiene la mayor concentración de incidencias a lo largo de estos tres años.
+              En este gráfico revisamos las zonas con más alta densidad de accidentes, y aunque se puede observar accidentes a todo lo largo de Chicago, hay una zona roja intensa entre Loop y Near North Side, en estos distritos se ubican edificios gubernamentales importantes y su centro financiero, además de tener la mejor zona de bares y discotecas, lo que lo hace muy atractivo también para el turismo, todo puede influir en la cantidad de accidentes que ocurren alli. 
               </br>              
 
               <br>
-              La herramienta utilizada es Tableu.
-              </br>            
+              Usamos el gráfico de mapas, porque nos ayuda a visualizar la densidad por cada zona de la ciudad claramente.
+              La herramienta utilizada es Python con la libreria Geopandas.
+              </br>
+              <br>
+              Cómo se desarrollo el gráfico y los datos utilizados se pueden ver en este link: 
+               <a href="https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=KFR-c4PrrKBd">https://colab.research.google.com/drive/1m7UHMnQMP5o3F_-OP8vZXmt-hcshiH_s#scrollTo=KFR-c4PrrKBd</a>
+              </br>           
           </div>
           <br>
           <a href="https://ibb.co/vcQfNKp"><img src="https://i.ibb.co/cyCRW70/Mapa-de-accidentes.png" alt="Mapa-de-accidentes" border="0"></a>
@@ -198,26 +203,45 @@ En este documento se intenta demostrar que existe un patrón de comportamiento r
         <h2 class="text-title">Interpretación</h2>
         <div class="text">
           <br>
-            <p>Luego de la revisión de datos podemos concluir que los picos mas altos y bajos estan relacionados con los meses más frios y calurosos del año, siendo agosto el mes en que se dispara la cantidad de incidencias.
+            <p>Luego de la revisión de datos podemos concluir hay una mayor cantidad de accidentes los meses de verano, incluso reflejandose esto durante los años de la pandemia, lastimosamente, también la cantidad de accidentes fatales ocurre en esta temporada. 
           </br>    
           <br>
-            Asi mismo vemos que los viernes son los días más críticos dentro de la semana, y hay que poner especial atención al bloque de las 4:00 PM a las 7:00 PM, porque es el periodo en que aumenta la cantidad de hechos delictivos, esto podría coincidir con el horario de salida laboral.
+            Asi mismo vemos que los viernes son los días con más cantidad de accidentes, probablemente la salida de personas que deciden hacer actividades de entretenimiento los fines de semana.
+            Hay también una constante durante los 4 años, en los 12 meses del año, reflejando que la mayor cantidad de accidentes ocurren durante la tarde.
           </br>
           <br>
-            Finalmente, las fuerzas de seguridad deberían ser reforzadas en este periodo de tiempo, sobre el distrito A1, que es el que presenta la mayor densidad de hechos delictivos</p>
-          </br>
-           
+            Es importante resaltar en este punto las principales causas de accidentes, porque esto ayudará a realizar buenas campañas de seguridad vial, las razones por la que ocurren muchos de estos eventos está relacionada a cosas básicas como no ceder el paso, seguir demasiado cerca o hacer adelanto inapropiados, es esencial trabajar estos temas como parte de la educación vial de los conductores y asi evitar muertes por imprudencia.
+          </br>        
+          <br>
+            Otro interesante item a destacar es la forma en que la pandemia influyó incluso en el tráfico de la ciudad, permeando en todos los ámbitos cotidianos de la vida.
+          </br>        
+          
+          </p>
+          </br>           
         </div>
     </div>
 
+    <div class="bibliografía">
+    <h2 class="text-title">Bibliografía</h2>
+    <div class="text">
+      <p>
+        <br>
+         <a href="https://www.kaggle.com/threadid/geopandas-mapping-chicago-crimes">https://www.kaggle.com/threadid/geopandas-mapping-chicago-crimes</a>
+        </br>
+        <br>
+         <a href="https://www.kaggle.com/threadid/chicago-shape-files/version/1?select=geo_export_33ca7ae0-c469-46ed-84da-cc7587ccbfe6.prj">https://www.kaggle.com/threadid/chicago-shape-files/version/1?select=geo_export_33ca7ae0-c469-46ed-84da-cc7587ccbfe6.prj</a>
+        </br>
+        <br>
+         <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.html">https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.html</a>
+        </br>          
+      </p>       
+    </div>
+</div>
         </br>
         </br>
         </br>
     </div>
 
-https://www.kaggle.com/threadid/geopandas-mapping-chicago-crimes
-https://www.kaggle.com/threadid/chicago-shape-files/version/1?select=geo_export_33ca7ae0-c469-46ed-84da-cc7587ccbfe6.prj
-https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.html
 
 </body>
 </html>
